@@ -1,0 +1,23 @@
+﻿@model List<ProjectManagement.Models.Task>
+
+<h2>Tasks</h2>
+<p>@Html.ActionLink("Create New", "Create")</p>
+
+<table class="table">
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Due Date</th>
+        <th>Is Completed</th>
+    </tr>
+    @foreach (var task in Model)
+    {
+        <tr>
+            <td>@task.Title</td>
+            <td>@task.Description</td>
+            <td>@task.DueDate.ToShortDateString()</td>
+            <td>@(task.IsCompleted ? "Yes" : "No")</td>
+        </tr>
+    }
+</table>
+

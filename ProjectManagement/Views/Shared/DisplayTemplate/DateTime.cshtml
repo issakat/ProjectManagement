@@ -1,0 +1,9 @@
+﻿@model DateTime?
+@if (Model.HasValue)
+{
+    @Model.Value.ToShortDateString()
+}
+else
+{
+    <text>Not specified</text>
+}

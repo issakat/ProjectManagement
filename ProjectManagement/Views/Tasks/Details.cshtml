@@ -1,0 +1,25 @@
+﻿@model Project
+
+<div>
+    <label>Created Date:</label>
+    @Html.DisplayFor(m => m.CreatedDate, "DateTime")
+</div>
+
+<div>
+    <label>Project Name:</label>
+    @Html.DisplayFor(m => m.Name, "ProjectName")
+</div>
+
+<div>
+    <label>Project Description:</label>
+    @Html.DisplayFor(m => m.Description, "ProjectDescription")
+</div>
+
+<div>
+    <label>Task Title:</label>
+    @Html.DisplayFor(m => m.TaskTitle, "ProjectTaskTitle")
+</div>
+
+<div>
+    @Html.DisplayForModel()
+</div>

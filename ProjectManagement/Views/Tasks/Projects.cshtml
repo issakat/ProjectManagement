@@ -1,0 +1,12 @@
+﻿@model IEnumerable<ProjectManagement.Models.Project>
+
+<h2>Projects</h2>
+
+<div class="row">
+    @foreach (var project in Model)
+    {
+        <div class="col-md-4">
+            @await Component.InvokeAsync("ProjectSummary", new { project })
+        </div>
+    }
+</div>
